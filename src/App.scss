@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.axis {
+  stroke-width: 2px;
+
+  &.y-axis { 
+    stroke-width: 0px;
+  }
+}
+
+.grid {
+  color: rgba(0,0,0,.1);
+
+  .tick:nth-of-type(1) {
+    color: rgba(0,0,0,0);
+  }
+}
+
+#coronavirus-chart { 
+  font-weight: 500;
+}
