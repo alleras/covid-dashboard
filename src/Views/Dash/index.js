@@ -9,13 +9,10 @@ import StatusIndicator from './DashElements/StatusIndicator';
 // Components
 import ProvinceSelector from 'Components/ProvinceSelector';
 
-// API
-import {API_KEY} from 'settings';
-
 // Style
 import style from './index.module.scss';
 
-function Dash({province, provinceList, provinceHandler}){
+function Dash({province, provinceList, provinceHandler, API_KEY}){
 
   let [dataSet, setData] = useState(null);
   let [originalData, setOriginalData] = useState(null);

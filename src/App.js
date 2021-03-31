@@ -36,7 +36,7 @@ function App() {
         <Initial provinceList={provinceList} provinceHandler={setCurrentProvince} />
       ) : (
         <>
-          <Dash province={province} provinceList={provinceList} provinceHandler={setCurrentProvince} />
+          <Dash province={province} provinceList={provinceList} provinceHandler={setCurrentProvince} API_KEY={API_KEY} />
           <Footer />
         </>
       )}
