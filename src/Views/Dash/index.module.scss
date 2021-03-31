@@ -1,0 +1,107 @@
+@import 'mixins.scss';
+
+.graphGroup {
+    display: block;
+    height:auto;
+    margin-bottom: 15px;
+
+    @include respond-to('medium'){
+        display: flex; 
+        justify-content: space-between; 
+    }
+}
+.graph {
+    font-weight: 500;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    height: 225px;
+    width: 100%;
+    margin-top: 10px;
+
+
+    @include respond-to('medium'){
+        height: 300px;
+        display: block;
+    }
+    .axis {
+        stroke-width: 2px;
+      
+        &.y-axis { 
+          stroke-width: 0px;
+        }
+      }
+      
+      .grid {
+        color: rgba(0,0,0,.1);
+      
+        .tick:nth-of-type(1) {
+          color: rgba(0,0,0,0);
+        }
+      }
+}
+
+.graphContainer{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    
+    @include respond-to('medium'){
+        flex-grow: 1;
+        margin-left: 15px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+    }
+}
+
+.top {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 95%);    
+  background-color: lightgreen;
+  transition: background-color 0.3s ease;
+  max-width: 100vw;
+  color: #FFF;
+  padding: 5px 0px;
+  text-shadow:rgba(0,0,0,.17)1px 1px 2px;
+  box-shadow: 1px 5px 10px rgba(0,0,0,.15);
+  margin: 0 0 2.5rem 0;
+
+  @include respond-to('medium'){
+    padding: 5px 25px;
+  }
+
+  h1{ margin: 0; }
+
+  &.low{
+    background-color: #00d474;
+    .data {stroke: #d4005f;}
+
+  }
+
+  &.medium {
+    background-color: #F5C000;
+    .data {stroke: #006aff;}
+  }
+  &.high {
+    background-color: rgb(255,150,0);
+    .data {stroke: #006aff;}
+  }
+  &.critical {
+    background-color: #CC0029;
+    .data {stroke: #00cca3;}
+  }
+  &.severe {
+    background-color: #790019;
+    .data {stroke: #790019;}
+  }
+}
+
+.bottom {
+  margin: auto;
+  width: 95vw;
+
+  @include respond-to('medium'){
+    width: 65vw;
+  }
+}

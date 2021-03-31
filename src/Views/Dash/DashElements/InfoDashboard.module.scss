@@ -1,0 +1,19 @@
+@import 'mixins.scss';
+
+.infoDashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5%;
+
+    @include respond-to('small'){
+        flex-direction:initial;
+    }
+}
+
+.dashItem {
+    flex: 2 0 50%;
+    height: 30px;
+    text-align: left;
+}

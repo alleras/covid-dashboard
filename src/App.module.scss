@@ -1,0 +1,9 @@
+@import 'mixins.scss';
+
+// Styles
+.App {
+  text-align: center;
+  margin: auto;
+  @include respond-to('medium'){
+  }
+}

@@ -1,0 +1,55 @@
+@import 'mixins.scss';
+
+.infoItem {
+    text-align: left;
+    height: auto;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.05);
+    vertical-align: top;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    // Fix inline items alignment
+    & > * {
+        vertical-align: top;
+        display: inline-block;
+    }
+    @include respond-to('small'){
+        max-width: 45%;
+        width: 45%;
+    }
+
+    .icon {
+        img{
+            height: 40px;
+            width: 40px;
+        }
+        margin-right: 10px;
+    }
+
+    .text {
+        .title{
+            color: #979797;
+            font-weight: bold;
+        }
+
+        .description{
+            color: #a1a1a1;
+        }
+    }
+
+    .amount {
+        margin-left: auto;
+        color: #727272;
+    }
+}
