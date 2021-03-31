@@ -1,18 +1,16 @@
 import React from 'react';
-import TimevsCasesChart from './Chart/TimevsCasesChart';
+import TimevsCasesChart from 'Components/TimevsCasesChart';
 
 
 function NewCasesChart (props) {
     const getSimpleData = () => props.data.map((val, i) => (
       {
-          cases: val.positive, 
+          cases: val.cases, 
           date: val.date, 
       })
     );
 
     const margin = {top: 10, bottom: 30, left: 60, right: 30};
-    const height = 400 - margin.top - margin.bottom;
-    const width = 800 - margin.right - margin.left;
 
     return (
         <>
@@ -20,9 +18,9 @@ function NewCasesChart (props) {
         {props.data ? (
         <TimevsCasesChart 
             data={getSimpleData()}
-            width={width}
-            height={height}
-            margin={margin}>
+            margin={margin}
+            id={props.id}
+            style={props.style}>
         </TimevsCasesChart>
         ) : <small>No data available. Please try again later</small>}
         </>
