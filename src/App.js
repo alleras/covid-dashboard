@@ -14,7 +14,7 @@ import Footer from './Views/Footer';
  TODO: Add spinner to get location button
  */
 
- const API_KEY = process.env.REACT_APP_COVID_API;
+ const API_KEY = 'b702d2590f054d019dd497ca87fc7de5';
 
 function App() {
   let sessionProvince = sessionStorage.getItem('province');
